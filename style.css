@@ -1,0 +1,54 @@
+<style>body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 45px;
+  text-decoration: underline;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding: 20px;
+}
+
+#grid ul {
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0;
+  padding: 20px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+#grid #article {
+  padding-left: 20px;
+}
+
+@media(max-width:800px) {
+  h1 {
+    border-bottom: none;
+  }
+
+  #grid ul {
+    border-right: none;
+  }
+
+  #grid {
+    display: block;
+  }
+}
+
+  #active{
+    color: red;
+    text-decoration: underline;
+  }
+
+  .saw{
+    color: gray;
+    text-decoration: none;
+  }
+</style>
