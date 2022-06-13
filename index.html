@@ -1,31 +1,83 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 2개의 버튼으로 배경색과 글자색을 변경함 -->
+    <input type="button" value="night" onclick="
+     document.querySelector('body').style.backgroundColor='black';
+     document.querySelector('body').style.color='white';
+  ">
+    <input type="button" value="day" onclick="
+     document.querySelector('body').style.backgroundColor='white';
+     document.querySelector('body').style.color='black';
+  "><br>
+    
+    <!-- 1개의 버튼으로 배경색과 글자색을 변경함 + 정리 안함-->
+    <input id="night_day1" type="button" value="night" onclick="
+      if(document.querySelector('#night_day1').value==='night'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#night_day1').value='day'
+      }
+      else{
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#night_day1').value='night'
+      }
+    "><br>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="style.css">
-</head>
+      <!-- 1개의 버튼으로 배경색과 글자색을 변경함 + 변수로 중복 정리 -->
+      <input id="night_day2" type="button" value="night" onclick="
+      var targetBody = document.querySelector('body');
+      var targetNightDay = document.querySelector('#night_day2');
+      if(targetNightDay.value==='night'){
+        targetBody.style.backgroundColor='black';
+        targetBody.style.color='white';
+        targetNightDay.value='day'
+      }
+      else{
+        targetBody.style.backgroundColor='white';
+        targetBody.style.color='black';
+        targetNightDay.value='night'
+      }
+      "><br>
 
-<body>
-  <h1><a href="index.html" class="saw" id="active">WEB3</a></h1>
-  <div id="grid">
-    <ul>
-      <li><a href="1.html" class="saw">HTML</a></li>
-      <li><a href="2.html" class="saw">CSS</a></li>
-      <li><a href="3.html" class="saw">Javascript</a></li>
-    </ul>
-    <div id="article">
-      <h2>WEB이란?</h2>
-      <p>
-        W3C standards define an Open <strong><a href="https://www.w3.org/standards/" target="_blank" title="WEB specification">Web</a></strong> Platform for application development that has the unprecedented potential to enable developers to build
-        rich
-        interactive experiences, powered by vast data stores, that are available on any device. Although the boundaries of the platform continue to evolve, industry leaders speak nearly in unison about how HTML5 will be the cornerstone for this
-        platform.
-        But the full strength of the platform relies on many more technologies that W3C and its partners are creating, including CSS, SVG, WOFF, the Semantic Web stack, XML, and a variety of APIs.
-      </p>
+      <!-- 1개의 버튼으로 배경색과 글자색을 변경함 + 변수, if, while문으로 정리할 예정 -->
+
+    <h1><a href="index.html" class="saw" id="active">WEB3</a></h1>
+    <div id="grid">
+      <ul>
+        <li><a href="1.html" class="saw">HTML</a></li>
+        <li><a href="2.html" class="saw">CSS</a></li>
+        <li><a href="3.html" class="saw">Javascript</a></li>
+      </ul>
+      <div id="article">
+        <h2>WEB이란?</h2>
+        <p>
+          W3C standards define an Open
+          <strong
+            ><a
+              href="https://www.w3.org/standards/"
+              target="_blank"
+              title="WEB specification"
+              >Web</a
+            ></strong
+          >
+          Platform for application development that has the unprecedented
+          potential to enable developers to build rich interactive experiences,
+          powered by vast data stores, that are available on any device.
+          Although the boundaries of the platform continue to evolve, industry
+          leaders speak nearly in unison about how HTML5 will be the cornerstone
+          for this platform. But the full strength of the platform relies on
+          many more technologies that W3C and its partners are creating,
+          including CSS, SVG, WOFF, the Semantic Web stack, XML, and a variety
+          of APIs.
+        </p>
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
